@@ -8,9 +8,9 @@ public class RunSIS {
 		
 		//displaymenu
 		switch (Kaitlyn.mainMenu()) {
-		case 1: // Add / delete a student
-		case 2: // Change grades/schedule
-		case 3: // Sort students
+		case 1: // Add / delete a student (another switch structure) goes here
+		case 2: // Change grades/schedule (another switch structure) goes here
+		case 3: // Sort students (another switch structure) goes here
 		}
 		
 	}
