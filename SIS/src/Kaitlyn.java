@@ -10,7 +10,6 @@ public class Kaitlyn
 		{
 			//display menu
 			
-			String userChoice = string1.nextLine();
 			System.out.println("Main Menu: ");
 			System.out.println("What would you like to do?");
 			System.out.println("	(1) add or delete a student");
@@ -19,6 +18,7 @@ public class Kaitlyn
 			//changeStudentinfo();
 			System.out.println("	(3) sort students");
 			//sortStudents();
+			String userChoice = string1.nextLine();
 			
 		}
 		
