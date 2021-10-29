@@ -265,6 +265,7 @@ public class Roster
 									" GPA: " +  roster.get(i).getGPA() + "\n");
 						}
 				}
+				
 
 	
 }

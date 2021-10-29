@@ -19,15 +19,17 @@ public class Kaitlyn
 			
 			// Input checks
 			Scanner string1 = new Scanner(System.in);
-			return inputChecks(string1);
+			return inputChecks(string1,3,1);
 			
 		}
 		
-		public static int inputChecks(Scanner s) {
+		public static int inputChecks(Scanner s, int l, int length) {
+			int l2=l;
+			if (l>10) l2=10;
 			boolean enteringInput = true;
 			do {
 				String userChoice = s.nextLine();
-				if (userChoice.length() != 1 || !(userChoice.charAt(0) >= 49 && userChoice.charAt(0)<=51)) {
+				if ((userChoice.length() != length && userChoice.length() != 1) || !(userChoice.charAt(0) >= 49 && userChoice.charAt(0)<=49+l2-1)) {
 					System.out.println("Please enter a valid option.");
 				}
 				else {
