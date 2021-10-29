@@ -21,26 +21,12 @@ public class RunSIS {
 			}
 			break;
 		case 3: // Sort students (another switch structure) goes here
-		}
-		
 			
-		//This will sort by GPA
-	//	Collections.sort(Roster.roster, new GpaComparator());
-
-		//This will sort by LastName
-	//	Collections.sort(Roster.roster, new LastNameComparator());
-		
-		
-		//This will sort by the First class
-	//Collections.sort(Roster.roster, new FirstClassComparator());
-		
-		//This will sort by LastName
-	//	Collections.sort(Roster.roster, new SecondClassComparator());
-		
-		//This will sort by LastName
-	//	Collections.sort(Roster.roster, new ThirdClassComparator());
-		
-//		Roster.printRoster();
+			switch (Sorting.sortingPrompt()) {
+			case 1: Sorting.sortByGPA(); break;
+			case 2: Sorting.sortByLastName(); break;
+			}
+		}
 	}
 }
 
