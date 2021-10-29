@@ -17,9 +17,6 @@ public class attempt1AddDele
 
 		public static void choice1() throws IOException
 		{
-			//whatever user chooses on main menu
-			int step1 = userIntInput.nextInt(); 
-			Scanner myClass = new Scanner(new File("Class.txt"));
 			
 			if (step1 == 1)
 				{

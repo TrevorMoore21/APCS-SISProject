@@ -13,7 +13,11 @@ public class RunSIS {
 		
 		//displaymenu
 		switch (Kaitlyn.mainMenu()) {
-		case 1: // Add / delete a student (another switch structure) goes here
+		case 1: 
+			switch (addDeleteStudent.addOrDeletePrompt()) {
+			case 1: addDeleteStudent.addStudent(); break;
+			case 2: addDeleteStudent.delStudent(); break;
+			}
 		case 2: 
 			switch (ChangeGrades.gradesOrSchedulePrompt()) {
 			case 1: ChangeGrades.changeGrades(); break;
