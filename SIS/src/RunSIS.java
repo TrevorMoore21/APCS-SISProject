@@ -18,6 +18,7 @@ public class RunSIS {
 			case 1: addDeleteStudent.addStudent(); break;
 			case 2: addDeleteStudent.delStudent(); break;
 			}
+			break;
 		case 2: 
 			switch (ChangeGrades.gradesOrSchedulePrompt()) {
 			case 1: ChangeGrades.changeGrades(); break;

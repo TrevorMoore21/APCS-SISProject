@@ -8,14 +8,11 @@ public class Kaitlyn
 		{
 			//display menu
 			
-			System.out.println("Main Menu: ");
-			System.out.println("What would you like to do?");
-			System.out.println("	(1) add or delete a student");
-			//addDeleteStudent();
-			System.out.println("	(2) change students grades/schedule");
-			//changeStudentinfo();
-			System.out.println("	(3) sort students");
-			//sortStudents();
+			System.out.println("Main Menu: "
+					+ "\nWhat would you like to do?"
+					+ "\n\t(1) Add or delete a student"
+					+ "\n\t(2) Change students grades/schedule"
+					+ "\n\t(3) Sort students");
 			
 			// Input checks
 			Scanner string1 = new Scanner(System.in);
