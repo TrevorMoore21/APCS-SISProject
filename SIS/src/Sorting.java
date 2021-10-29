@@ -44,6 +44,4 @@ public class Sorting
 				Collections.sort(Roster.roster, new ThirdClassComparator());
 				Roster.printRoster();
 			}
-		
-		
 	}
