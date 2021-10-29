@@ -12,21 +12,26 @@ public class RunSIS {
 		Roster.fillRoster();
 		
 		//displaymenu
-		switch (Kaitlyn.mainMenu()) {
-		case 1: 
-			switch (addDeleteStudent.addOrDeletePrompt()) {
-			case 1: addDeleteStudent.addStudent(); break;
-			case 2: addDeleteStudent.delStudent(); break;
+		boolean editing = true;
+		do {
+			switch (Kaitlyn.mainMenu()) {
+			case 1: 
+				switch (addDeleteStudent.addOrDeletePrompt()) {
+				case 1: addDeleteStudent.addStudent(); break;
+				case 2: addDeleteStudent.delStudent(); break;
+				}
+				break;
+			case 2: 
+				switch (ChangeGrades.gradesOrSchedulePrompt()) {
+				case 1: ChangeGrades.changeGrades(); break;
+				case 2: ChangeGrades.switchClasses(); break;
+				}
+				break;
+			case 3: // Sort students (another switch structure) goes here
+			case 4: editing = false; break;
 			}
-			break;
-		case 2: 
-			switch (ChangeGrades.gradesOrSchedulePrompt()) {
-			case 1: ChangeGrades.changeGrades(); break;
-			case 2: ChangeGrades.switchClasses(); break;
-			}
-			break;
-		case 3: // Sort students (another switch structure) goes here
-		}
+		} while (editing);
+		System.out.println("\nExiting...");
 		
 			
 		//This will sort by GPA

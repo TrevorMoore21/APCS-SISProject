@@ -11,11 +11,12 @@ public class Kaitlyn
 			System.out.println("Main Menu: "
 					+ "\n\t(1) Add or delete a student"
 					+ "\n\t(2) Change students grades/schedule"
-					+ "\n\t(3) Sort students");
+					+ "\n\t(3) Sort students"
+					+ "\n\t(4) Exit");
 			
 			// Input checks
 			Scanner string1 = new Scanner(System.in);
-			return inputChecks(string1,3,1);
+			return inputChecks(string1,4,1);
 			
 		}
 		
