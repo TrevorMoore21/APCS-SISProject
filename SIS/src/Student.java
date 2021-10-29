@@ -3,23 +3,23 @@ public class Student
 		private String firstName;
 		private String lastName;
 		private String firstClass;
-		private String secondClass;
-		private String thirdClass;
 		private String firstGrade;
+		private String secondClass;
 		private String secondGrade;
+		private String thirdClass;
 		private String thirdGrade;
-		private double GPA;
+		private String GPA;
 		
-		public Student(String n, String l, String fc, String sc, String tc, String fg, String sg, String tg, double g)
+		public Student(String n, String l, String fc, String fg, String sc,  String sg, String tc,String tg, String g)
 			{
 				firstName = n;
 				lastName = l;
 				GPA = g;
 				firstClass = fc;
-				secondClass = sc;
-				thirdClass = tc;
 				firstGrade = fg;
+				secondClass = sc;
 				secondGrade = sg;
+				thirdClass = tc;
 				thirdGrade = tg;
 			}
 
@@ -43,16 +43,6 @@ public class Student
 				this.lastName = lastName;
 			}
 
-		public double getGPA()
-			{
-				return GPA;
-			}
-
-		public void setGPA(double gPA)
-			{
-				GPA = gPA;
-			}
-
 		public String getFirstClass()
 			{
 				return firstClass;
@@ -61,26 +51,6 @@ public class Student
 		public void setFirstClass(String firstClass)
 			{
 				this.firstClass = firstClass;
-			}
-
-		public String getSecondClass()
-			{
-				return secondClass;
-			}
-
-		public void setSecondClass(String secondClass)
-			{
-				this.secondClass = secondClass;
-			}
-
-		public String getThirdClass()
-			{
-				return thirdClass;
-			}
-
-		public void setThirdClass(String thirdClass)
-			{
-				this.thirdClass = thirdClass;
 			}
 
 		public String getFirstGrade()
@@ -93,6 +63,16 @@ public class Student
 				this.firstGrade = firstGrade;
 			}
 
+		public String getSecondClass()
+			{
+				return secondClass;
+			}
+
+		public void setSecondClass(String secondClass)
+			{
+				this.secondClass = secondClass;
+			}
+
 		public String getSecondGrade()
 			{
 				return secondGrade;
@@ -101,6 +81,16 @@ public class Student
 		public void setSecondGrade(String secondGrade)
 			{
 				this.secondGrade = secondGrade;
+			}
+
+		public String getThirdClass()
+			{
+				return thirdClass;
+			}
+
+		public void setThirdClass(String thirdClass)
+			{
+				this.thirdClass = thirdClass;
 			}
 
 		public String getThirdGrade()
@@ -112,5 +102,17 @@ public class Student
 			{
 				this.thirdGrade = thirdGrade;
 			}
+
+		public String getGPA()
+			{
+				return GPA;
+			}
+
+		public void setGPA(String gPA)
+			{
+				GPA = gPA;
+			}
+
+
 		
 	}
