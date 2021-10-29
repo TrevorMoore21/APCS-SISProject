@@ -9,7 +9,6 @@ public class Kaitlyn
 			//display menu
 			
 			System.out.println("Main Menu: "
-					+ "\nWhat would you like to do?"
 					+ "\n\t(1) Add or delete a student"
 					+ "\n\t(2) Change students grades/schedule"
 					+ "\n\t(3) Sort students");
