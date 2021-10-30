@@ -57,7 +57,8 @@ public class RunSIS {
 				} while (entering);
 				// Sort students (another switch structure) goes here
 				break;
-			case 4: editing = false; break;
+			case 4: Roster.printRoster(); break;
+			case 5: editing = false; break;
 			}
 		} while (editing);
 		System.out.println("\nExiting...");

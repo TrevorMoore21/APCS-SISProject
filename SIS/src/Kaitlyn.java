@@ -13,11 +13,12 @@ public class Kaitlyn
 					+ "\n\t(1) Add or delete a student"
 					+ "\n\t(2) Change students grades/schedule"
 					+ "\n\t(3) Sort students"
-					+ "\n\t(4) Exit");
+					+ "\n\t(4) Print roster"
+					+ "\n\t(5) Exit");
 			
 			// Input checks
 			Scanner string1 = new Scanner(System.in);
-			return inputChecks(string1,4,1);
+			return inputChecks(string1,5,1);
 			
 		}
 		
