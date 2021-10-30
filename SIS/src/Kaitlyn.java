@@ -8,7 +8,8 @@ public class Kaitlyn
 		{
 			//display menu
 			
-			System.out.println("Main Menu: "
+			System.out.println("\nMain Menu: "
+					+ "\n\tWhat do you want to do?"
 					+ "\n\t(1) Add or delete a student"
 					+ "\n\t(2) Change students grades/schedule"
 					+ "\n\t(3) Sort students"
