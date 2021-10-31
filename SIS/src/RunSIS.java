@@ -15,7 +15,7 @@ public class RunSIS {
 		//displaymenu
 		boolean editing = true;
 		do {
-			switch (Kaitlyn.mainMenu()) {
+			switch (MainMenu.mainMenu()) {
 			case 1: 
 				switch (addDeleteStudent.addOrDeletePrompt()) {
 				case 1: addDeleteStudent.addStudent(); break;

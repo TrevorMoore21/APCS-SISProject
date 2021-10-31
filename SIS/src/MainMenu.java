@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
 
-public class Kaitlyn
+public class MainMenu
 	{
 		public static int mainMenu()
 		{
