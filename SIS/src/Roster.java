@@ -29,224 +29,24 @@ public class Roster
 				public static String calGpa(String a, String b, String c)
 				{
 			
-					double gradePoint1 = 0;
-					double gradePoint2 = 0;
-					double gradePoint3 = 0;
+					double gradePoint = 0;
+					String[] grades = {a,b,c};
 					
-					switch (a)
-						{
-							case "A+":
-								{
-      						gradePoint1 = 4.00;
-      						break;
-								}
-  						case "A":
-  							{
-    							gradePoint1 = 4.00;
-    							break;
-  							}
-  						case "A-":
-  							{
-    							gradePoint1= 3.67;
-    							break;
-  							}
-  						case "B+":
-  							{	
-    							gradePoint1 = 3.33;
-    							break;
-  							}
-  						case "B":
-  							{
-    							gradePoint1 = 3.00;
-    							break;
-  							}
-  						case "B-":
-  							{
-    							gradePoint1 = 2.67;
-    							break;
-  							}
-  						case "C+":
-  							{
-  								gradePoint1 = 2.33;
-    							break;
-  							}
-  						case "C":
-  							{
-    							gradePoint1 = 2.00;
-    							break;
-  							}
-  						case "C-":
-  							{
-    							gradePoint1 = 1.67;
-    							break;
-  							}
-  						case "D+":
-  							{
-    							gradePoint1 = 1.33;
-    							break;
-  							}
-  						case "D":
-  							{
-    							gradePoint1 = 1.00;
-    							break;
-  							}
-  							
-  						case "D-":
-    							{
-      							gradePoint1 = 0.67;
-      							break;
-    							}
-  							
-  						default:
-  							{
-  								gradePoint1 = 0.90;
-  								break;
-  							}
+					for (int i = 0; i < grades.length; i++) {
+						if (grades[i].equals("A+") || grades[i].equals("A")) gradePoint += 4.;
+						else if (grades[i].equals("A-")) gradePoint += 3.67;
+						else if (grades[i].equals("B+")) gradePoint += 3.33;
+						else if (grades[i].equals("B")) gradePoint += 3.;
+						else if (grades[i].equals("B-")) gradePoint += 2.67;
+						else if (grades[i].equals("C+")) gradePoint += 2.33;
+						else if (grades[i].equals("C")) gradePoint += 2.;
+						else if (grades[i].equals("C-")) gradePoint += 1.67;
+						else if (grades[i].equals("D+")) gradePoint += 1.33;
+						else if (grades[i].equals("D")) gradePoint += 1.;
+						else if (grades[i].equals("D-")) gradePoint += .67;
 					}
-					
-					switch (b)
-					{
-						case "A+":
-							{
-								gradePoint2 = 4.00;
-    						break;
-							}
-						case "A":
-							{
-								gradePoint2 = 4.00;
-  							break;
-							}
-						case "A-":
-							{
-								gradePoint2= 3.67;
-  							break;
-							}
-						case "B+":
-							{	
-								gradePoint2 = 3.33;
-  							break;
-							}
-						case "B":
-							{
-								gradePoint2 = 3.00;
-  							break;
-							}
-						case "B-":
-							{
-								gradePoint2 = 2.67;
-  							break;
-							}
-						case "C+":
-							{
-								gradePoint2 = 2.33;
-  							break;
-							}
-						case "C":
-							{
-								gradePoint2 = 2.00;
-  							break;
-							}
-						case "C-":
-							{
-								gradePoint2 = 1.67;
-  							break;
-							}
-						case "D+":
-							{
-								gradePoint2 = 1.33;
-  							break;
-							}
-						case "D":
-							{
-								gradePoint2 = 1.00;
-  							break;
-							}
-							
-						case "D-":
-  							{
-    							gradePoint2 = 0.67;
-    							break;
-  							}
-							
-						default:
-							{
-								gradePoint2 = 0.00;
-								break;
-							}
-				}
-					
-					switch (c)
-					{
-						case "A+":
-							{
-								gradePoint3 = 4.00;
-    						break;
-							}
-						case "A":
-							{
-								gradePoint3 = 4.00;
-  							break;
-							}
-						case "A-":
-							{
-								gradePoint3= 3.67;
-  							break;
-							}
-						case "B+":
-							{	
-								gradePoint3 = 3.33;
-  							break;
-							}
-						case "B":
-							{
-								gradePoint3 = 3.00;
-  							break;
-							}
-						case "B-":
-							{
-								gradePoint3 = 2.67;
-  							break;
-							}
-						case "C+":
-							{
-								gradePoint3 = 2.33;
-  							break;
-							}
-						case "C":
-							{
-								gradePoint3 = 2.00;
-  							break;
-							}
-						case "C-":
-							{
-								gradePoint3 = 1.67;
-  							break;
-							}
-						case "D+":
-							{
-								gradePoint3 = 1.33;
-  							break;
-							}
-						case "D":
-							{
-								gradePoint3 = 1.0;
-  							break;
-							}
-							
-						case "D-":
-  							{
-    							gradePoint3 = 0.67;
-    							break;
-  							}
-							
-						default:
-							{
-								gradePoint3 = 0.00;
-								break;
-							}
-				}
 				
-					double gpa = (gradePoint1 + gradePoint2 + gradePoint3) / 3;
+					double gpa = (gradePoint) / 3;
 					DecimalFormat d = new DecimalFormat("0.00");
 					
 					return d.format(gpa);
