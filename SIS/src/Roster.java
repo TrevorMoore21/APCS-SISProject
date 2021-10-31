@@ -73,6 +73,13 @@ public class Roster
 					System.out.println("+----+----------+------------+---------+----+---------+----+---------+----+------+");
 				}
 				
+				public static void resetRoster() throws IOException {
+					for (int i = 0; i < roster.size();) {
+						roster.remove(i);
+					}
+					fillRoster();
+				}
+				
 
 	
 }

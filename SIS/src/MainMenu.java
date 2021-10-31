@@ -15,7 +15,8 @@ public class MainMenu
 					+ "\n\t(2) Change students grades/schedule"
 					+ "\n\t(3) Sort students"
 					+ "\n\t(4) Print roster"
-					+ "\n\t(5) Exit");
+					+ "\n\t(5) Reset roster"
+					+ "\n\t(6) Exit");
 			
 			// Input checks
 			Scanner string1 = new Scanner(System.in);

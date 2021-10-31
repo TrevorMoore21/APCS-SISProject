@@ -60,7 +60,8 @@ public class RunSIS {
 				} while (entering);
 				break;
 			case 4: Roster.printRoster(); break;
-			case 5: editing = false; break;
+			case 5: Roster.resetRoster(); break;
+			case 6: editing = false; break;
 			}
 		} while (editing);
 		System.out.println("\nExiting...");
