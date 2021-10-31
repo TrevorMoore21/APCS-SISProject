@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -29,13 +30,15 @@ public class RunSIS {
 				break;
 			case 3: 
 				switch (SortStudents.prompt()) {
-				case 1: Collections.sort(Roster.roster, new LastNameComparator()); break;
-				case 2: Collections.sort(Roster.roster, new GpaComparator()); break;
+				case 1: Roster.roster.sort(Comparator.comparing(Student::getLastName)); break;
+//					Collections.sort(Roster.roster, new LastNameComparator()); 
+				case 2: Roster.roster.sort(Comparator.comparing(Student::getGPA).reversed()); break;
+//					Collections.sort(Roster.roster, new GpaComparator()); break;
 				case 3: 
 					switch (SortStudents.classSorterPrompt()) {
-					case 1: Collections.sort(Roster.roster, new FirstClassComparator()); break;
-					case 2: Collections.sort(Roster.roster, new SecondClassComparator()); break;
-					case 3: Collections.sort(Roster.roster, new ThirdClassComparator()); break;
+					case 1: Roster.roster.sort(Comparator.comparing(Student::getFirstClass).thenComparing(Student::getLastName)); break;
+					case 2: Roster.roster.sort(Comparator.comparing(Student::getSecondClass).thenComparing(Student::getLastName)); break;
+					case 3: Roster.roster.sort(Comparator.comparing(Student::getThirdClass).thenComparing(Student::getLastName)); break;
 					}
 					break; 
 				}
@@ -55,7 +58,6 @@ public class RunSIS {
 						entering = false;
 					}
 				} while (entering);
-				// Sort students (another switch structure) goes here
 				break;
 			case 4: Roster.printRoster(); break;
 			case 5: editing = false; break;
@@ -82,6 +84,7 @@ public class RunSIS {
 	//	Collections.sort(Roster.roster, new ThirdClassComparator());
 		
 //		Roster.printRoster();
+		
 	}
 }
 
