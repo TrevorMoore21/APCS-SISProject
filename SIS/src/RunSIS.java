@@ -65,26 +65,6 @@ public class RunSIS {
 		} while (editing);
 		System.out.println("\nExiting...");
 		
-			
-		
-		//This will sort by GPA
-//		Collections.sort(Roster.roster, new GpaComparator());
-		
-		//This will sort by LastName
-//		Collections.sort(Roster.roster, new LastNameComparator());
-		
-		
-		//This will sort by the First class
-	//Collections.sort(Roster.roster, new FirstClassComparator());
-		
-		//This will sort by LastName
-	//	Collections.sort(Roster.roster, new SecondClassComparator());
-		
-		//This will sort by LastName
-	//	Collections.sort(Roster.roster, new ThirdClassComparator());
-		
-//		Roster.printRoster();
-		
 	}
 }
 
