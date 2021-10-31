@@ -20,7 +20,7 @@ public class MainMenu
 			
 			// Input checks
 			Scanner string1 = new Scanner(System.in);
-			return inputChecks(string1,5,1);
+			return inputChecks(string1,6,1);
 			
 		}
 		
