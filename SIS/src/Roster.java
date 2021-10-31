@@ -55,12 +55,17 @@ public class Roster
 	
 				public static void printRoster()
 				{
-					// Format for the table
-					String tableFormat = "| %-2d | %-8s | %-10s | %-7s | %-2s | %-7s | %-2s | %-7s | %-2s | %-4s |%n";
 					
-					System.out.println("+----+----------+------------+---------+----+---------+----+---------+----+------+"
-							+ "\n| ID |First Name| Last Name  | Class 1 |Grd | Class 2 |Grd | Class 3 |Grd | GPA  |"
-							+ "\n+----+----------+------------+---------+----+---------+----+---------+----+------+");
+					// Format for the table
+					String tableFormat = format("| %-2d | %-8s | %-10s | %-7s | %-2s | %-7s | %-2s | %-7s | %-2s | %-4s |%n");
+					final String a = "\u2502";
+					System.out.println(format("a====b==========b============b=========b====b=========b====b=========b====b======c"));
+					System.out.println("\u001B[1m" + format(a)+" ID "+format(a)+"First Name"+format(a)+" Last Name  "+format(a)
+					+" Class 1 "+format(a)+"Grd "+format(a)
+					+" Class 2 "+format(a)+"Grd "+format(a)
+					+" Class 3 "+format(a)+"Grd "+format(a)
+					+" GPA  "+format(a) + "\u001B[0m");
+					System.out.println(format("j====e==========e============e=========e====e=========e====e=========e====e======f"));
 
 					for(int i =0; i < roster.size(); i++)
 						{
@@ -70,9 +75,24 @@ public class Roster
 								roster.get(i).getThirdClass(),roster.get(i).getThirdGrade(),
 								roster.get(i).getGPA());
 						}
-					System.out.println("+----+----------+------------+---------+----+---------+----+---------+----+------+");
+					System.out.println(format("g====h==========h============h=========h====h=========h====h=========h====h======i"));
 				}
 				
+				private static String format(String string) {
+					return string.replace("a", "\u250c")
+							.replace("b", "\u252c")
+							.replace("c", "\u2510")
+							.replace('j', '\u251c')
+			                .replace('e', '\u253c')
+			                .replace('f', '\u2524')
+			                .replace('g', '\u2514')
+			                .replace('h', '\u2534')
+			                .replace('i', '\u2518')
+							.replace("=", "\u2500")
+							.replace('|', '\u2502');
+				}
+
+
 				public static void resetRoster() throws IOException {
 					for (int i = 0; i < roster.size();) {
 						roster.remove(i);
