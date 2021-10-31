@@ -55,15 +55,22 @@ public class Roster
 	
 				public static void printRoster()
 				{
+					// Format for the table
+					String tableFormat = "| %-2d | %-8s | %-10s | %-7s | %-2s | %-7s | %-2s | %-7s | %-2s | %-4s |%n";
 					
+					System.out.println("+----+----------+------------+---------+----+---------+----+---------+----+------+"
+							+ "\n| ID |First Name| Last Name  | Class 1 |Grd | Class 2 |Grd | Class 3 |Grd | GPA  |"
+							+ "\n+----+----------+------------+---------+----+---------+----+---------+----+------+");
+
 					for(int i =0; i < roster.size(); i++)
 						{
-							System.out.println(i+1 + ": " +roster.get(i).getFirstName() + " " + roster.get(i).getLastName() + 
-									" " + roster.get(i).getFirstClass() + " " + roster.get(i).getFirstGrade() + 
-									" " + roster.get(i).getSecondClass() + " " + roster.get(i).getSecondGrade() +
-									" " + roster.get(i).getThirdClass() + " " + roster.get(i).getThirdGrade() + 
-									" GPA: " +  roster.get(i).getGPA() + "\n");
+						System.out.format(tableFormat,i+1,roster.get(i).getFirstName(),roster.get(i).getLastName(),
+								roster.get(i).getFirstClass(),roster.get(i).getFirstGrade(),
+								roster.get(i).getSecondClass(),roster.get(i).getSecondGrade(),
+								roster.get(i).getThirdClass(),roster.get(i).getThirdGrade(),
+								roster.get(i).getGPA());
 						}
+					System.out.println("+----+----------+------------+---------+----+---------+----+---------+----+------+");
 				}
 				
 

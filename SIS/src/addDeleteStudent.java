@@ -44,8 +44,12 @@ public class addDeleteStudent {
 		}
 		Scanner userInput = new Scanner(System.in);
 		// Do Input Checks!!
-		int studentNum = userInput.nextInt();
-		userInput.nextLine();
+		String input = userInput.nextLine();
+		if (input.toLowerCase().equals("e")) {
+			System.out.println("\nExiting...");
+			System.exit(0);
+		}
+		int studentNum = Integer.parseInt(input);
 		
 		System.out.println("Removed " + Roster.roster.get(studentNum-1).getFirstName() + " " + Roster.roster.get(studentNum-1).getLastName() + ".");
 		Roster.roster.remove(studentNum-1);

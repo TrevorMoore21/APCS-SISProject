@@ -9,6 +9,7 @@ public class MainMenu
 			//display menu
 			
 			System.out.println("\nMain Menu: "
+					+ "\nNote: at any menu, enter the letter \"e\" to exit the program"
 					+ "\n\tWhat do you want to do?"
 					+ "\n\t(1) Add or delete a student"
 					+ "\n\t(2) Change students grades/schedule"
@@ -28,7 +29,11 @@ public class MainMenu
 			boolean enteringInput = true;
 			do {
 				String userChoice = s.nextLine();
-				if ((userChoice.length() != length && userChoice.length() != 1) || !(userChoice.charAt(0) >= 49 && userChoice.charAt(0)<=49+l2-1)) {
+				if (userChoice.toLowerCase().equals("e")) {
+					System.out.println("\nExiting...");
+					System.exit(0);
+				}
+				else if ((userChoice.length() != length && userChoice.length() != 1) || !(userChoice.charAt(0) >= 49 && userChoice.charAt(0)<=49+l2-1)) {
 					System.out.println("Please enter a valid option.");
 				}
 				else {
