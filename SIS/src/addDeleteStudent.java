@@ -7,7 +7,7 @@ public class addDeleteStudent {
 				+ "\n\t(1) Add Student"
 				+ "\n\t(2) Delete Student");
 		Scanner userInput = new Scanner(System.in);
-		return Kaitlyn.inputChecks(userInput, 2, 1);
+		return MainMenu.inputChecks(userInput, 2, 1);
 		
 	}
 	

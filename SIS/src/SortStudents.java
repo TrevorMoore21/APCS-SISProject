@@ -8,7 +8,7 @@ public class SortStudents {
 				+ "\n\t(2) Sort by GPA"
 				+ "\n\t(3) Sort by period");
 		Scanner userInput = new Scanner(System.in);
-		return Kaitlyn.inputChecks(userInput, 3, 1);
+		return MainMenu.inputChecks(userInput, 3, 1);
 	}
 	
 	public static int classSorterPrompt() {
@@ -17,7 +17,7 @@ public class SortStudents {
 				+ "\n\t(2) Sort by second period"
 				+ "\n\t(3) Sort by third period");
 		Scanner userInput = new Scanner(System.in);
-		return Kaitlyn.inputChecks(userInput, 3, 1);
+		return MainMenu.inputChecks(userInput, 3, 1);
 		
 	}
 }
