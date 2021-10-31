@@ -64,7 +64,7 @@ public class Roster
 
 					for(int i =0; i < roster.size(); i++)
 						{
-						System.out.format(tableFormat,i+1,roster.get(i).getFirstName(),roster.get(i).getLastName(),
+						System.out.printf(tableFormat,i+1,roster.get(i).getFirstName(),roster.get(i).getLastName(),
 								roster.get(i).getFirstClass(),roster.get(i).getFirstGrade(),
 								roster.get(i).getSecondClass(),roster.get(i).getSecondGrade(),
 								roster.get(i).getThirdClass(),roster.get(i).getThirdGrade(),
