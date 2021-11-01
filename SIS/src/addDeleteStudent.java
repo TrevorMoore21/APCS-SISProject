@@ -10,6 +10,7 @@ public class addDeleteStudent {
 		return MainMenu.inputChecks(userInput, 2, 1);
 		
 	}
+	//this sucks, but this is extra
 	//I think this is my last pull request
 	public static void addStudent() {
 		Scanner userInput = new Scanner(System.in);
