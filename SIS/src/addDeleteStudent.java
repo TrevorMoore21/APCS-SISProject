@@ -53,7 +53,7 @@ public class addDeleteStudent {
 				System.exit(0);
 			}
 			int studentNum = Integer.parseInt(input);
-		
+			//rando comment for credit
 			if (studentNum <= Roster.roster.size() && studentNum > 0) {
 				System.out.println("Removed " + Roster.roster.get(studentNum-1).getFirstName() + " " + Roster.roster.get(studentNum-1).getLastName() + ".");
 				Roster.roster.remove(studentNum-1);
