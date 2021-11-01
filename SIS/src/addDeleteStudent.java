@@ -13,7 +13,7 @@ public class addDeleteStudent {
 	
 	public static void addStudent() {
 		Scanner userInput = new Scanner(System.in);
-		
+		//another comment about adding students
 		System.out.println("\nEnter the student's first name.");
 		String fn = userInput.nextLine();
 		System.out.println("\nEnter the student's last name.");
