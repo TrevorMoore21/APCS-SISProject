@@ -38,6 +38,7 @@ public class addDeleteStudent {
 	}
 	
 	public static void delStudent() {
+		//now select a student to delete
 		System.out.println("\nSelect a Student");
 		for (int i=0;i<Roster.roster.size();i++) {
 			System.out.println("\t(" + (i+1) + ") " + Roster.roster.get(i).getFirstName() + " " + Roster.roster.get(i).getLastName());
