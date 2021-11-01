@@ -8,7 +8,7 @@ public class ChangeGrades {
 				+ "\n\t(1) Change Grade"
 				+ "\n\t(2) Switch Classes");
 		Scanner userInput = new Scanner(System.in);
-		return Kaitlyn.inputChecks(userInput, 2, 1);
+		return MainMenu.inputChecks(userInput, 2, 1);
 		
 	}
 	
@@ -19,14 +19,18 @@ public class ChangeGrades {
 		}
 		Scanner userInput = new Scanner(System.in);
 		// Do Input Checks!!
-		int studentNum = userInput.nextInt();
-		userInput.nextLine();
+		String input = userInput.nextLine();
+		if (input.toLowerCase().equals("e")) {
+			System.out.println("\nExiting...");
+			System.exit(0);
+		}
+		int studentNum = Integer.parseInt(input);
 		
 		System.out.println("\nSelect a Class");
 		System.out.println("\t(1) " + Roster.roster.get(studentNum-1).getFirstClass()
 				+ "\n\t(2) " + Roster.roster.get(studentNum-1).getSecondClass()
 				+ "\n\t(3) " + Roster.roster.get(studentNum-1).getThirdClass());
-		switch (Kaitlyn.inputChecks(userInput, 3, 1)) {
+		switch (MainMenu.inputChecks(userInput, 3, 1)) {
 		case 1: 
 			System.out.println("Enter the new " + Roster.roster.get(studentNum-1).getFirstClass() + " grade here");
 			// Do Input Checks!!
@@ -54,14 +58,18 @@ public class ChangeGrades {
 		}
 		Scanner userInput = new Scanner(System.in);
 		// Do Input Checks!!
-		int studentNum = userInput.nextInt();
-		userInput.nextLine();
+		String input = userInput.nextLine();
+		if (input.toLowerCase().equals("e")) {
+			System.out.println("\nExiting...");
+			System.exit(0);
+		}
+		int studentNum = Integer.parseInt(input);
 		
 		System.out.println("\nSelect a Class to Change");
 		System.out.println("\t(1) " + Roster.roster.get(studentNum-1).getFirstClass()
 				+ "\n\t(2) " + Roster.roster.get(studentNum-1).getSecondClass()
 				+ "\n\t(3) " + Roster.roster.get(studentNum-1).getThirdClass());
-		switch (Kaitlyn.inputChecks(userInput, 3, 1)) {
+		switch (MainMenu.inputChecks(userInput, 3, 1)) {
 		case 1:
 			System.out.println("Enter the new class here:");
 			// Do Input Checks!!

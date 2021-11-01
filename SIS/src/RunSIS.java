@@ -25,6 +25,7 @@ public class RunSIS {
 			switch (Sorting.sortingPrompt()) {
 			case 1: Sorting.sortByGPA(); break;
 			case 2: Sorting.sortByLastName(); break;
+			case 3: Sorting.sortByClass(); break;
 			}
 		}
 	}

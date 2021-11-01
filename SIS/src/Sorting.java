@@ -11,8 +11,7 @@ public class Sorting
 					+ "\n\t(2) by Last Name"
 					+ "\n\t(3) by Class");
 			Scanner userInput = new Scanner(System.in);
-			return Kaitlyn.inputChecks(userInput, 1, 3);
-			
+			return Kaitlyn.inputChecks(userInput, 1, 3);		
 		}
 		
 		public static void sortByGPA()
@@ -25,6 +24,13 @@ public class Sorting
 			{
 				Collections.sort(Roster.roster, new LastNameComparator());
 				Roster.printRoster();
+			}
+		
+		public static void sortByClass()
+			{
+				System.out.println("What class would you like to sort by?");
+				Scanner userInput = new Scanner(System.in);
+				int sortClassChoice = userInput.nextInt();	
 			}
 		
 		public static void sortByFirstClass()
