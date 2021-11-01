@@ -43,6 +43,7 @@ public class addDeleteStudent {
 		for (int i=0;i<Roster.roster.size();i++) {
 			System.out.println("\t(" + (i+1) + ") " + Roster.roster.get(i).getFirstName() + " " + Roster.roster.get(i).getLastName());
 		}
+		//I like nacho cheese and Mr. McGuire's credit
 		Scanner userInput = new Scanner(System.in);
 		// Do Input Checks!!
 		boolean entering = true;
